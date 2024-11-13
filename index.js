@@ -39,9 +39,11 @@ app.get('/backend', async (req, res) => {
     const users = await collection.find(query).toArray();
     console.log(users);
     res.json(users);
+        res.status(200).json({ message: "Success!" });
+
   } catch (error) {
     console.error('Error fetching data:', error);
-    res.status(500).send('Error fetching data');
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
