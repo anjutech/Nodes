@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 
-const uri = process.env.MONGODB_URI || "mongodb+srv://<user>:<user>@cluster0.wo2te.mongodb.net/<users>?retryWrites=true&w=majority
+const uri = process.env.MONGODB_URI || "mongodb+srv://user:user@cluster0.wo2te.mongodb.net/users?retryWrites=true&w=majority
 ";
 const dbName = process.env.DB_NAME;
 const client = new MongoClient(uri);
