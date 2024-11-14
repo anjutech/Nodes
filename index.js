@@ -16,10 +16,10 @@ app.use(cors());
   }
 
   // Your regular function code here
-  if (req.url === '/backend') {
-    res.json(users);
+  // if (req.url === '/backend') {
+  //   res.json(users);
     res.status(200).json({ message: "Hello, world!" });
-  }
+  // }
 };
 
 async function connectToDB() {
